@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+@mixin barlow-semi-condensed-medium {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+@mixin barlow-semi-condensed-semibold {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+// Neutral
+$Light-gray: hsl(0, 0%, 81%);
+$Light-grayish-blue: hsl(210, 46%, 95%);
+
+// Primary
+$Moderate-violet: hsl(263, 55%, 52%);
+$Very-dark-grayish-blue: hsl(217, 19%, 35%);
+$Very-dark-blackish-blue: hsl(219, 29%, 14%);
+$White: hsl(0, 0%, 100%);
+
+body {
+    padding: 2rem;
+    height: 100vh;
+    background-color: $Light-gray;
+}
+
+.container {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    "a a b c"
+    "d e e c"
+    ;
+}
+
+
+img {
+    border-radius: 100%;
+    height: 50px;
+}
+
+.card {
+    padding: 2rem;
+    background-color: $Moderate-violet;
+    color: $White;
+    border-radius: 10px;
+    line-height: 1.5rem;
+    header {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: flex-start;
+        gap: 1.5rem;
+        div {
+            h4 {
+                @include barlow-semi-condensed-semibold();
+            }
+            p {
+                @include barlow-semi-condensed-medium();
+                color: $Light-gray;
+            }
+        }
+    }
+    .info-1 {
+        padding: 1rem 0;
+        @include barlow-semi-condensed-semibold();
+        font-size: large;
+    }
+    .info-2 {
+        @include barlow-semi-condensed-medium();
+        color: $Light-gray;
+    }
+    .name {
+        p {
+            
+        }
+    }
+}
+
+.daniel {
+    grid-area: a;    
+    background: url('./images/bg-pattern-quotation.svg') $Moderate-violet;
+    background-repeat: no-repeat;
+    background-position: 80% 0%;
+}
+.jonathan {
+    background-color: $Very-dark-grayish-blue ;
+    grid-area: b;
+}
+.patrick {
+    background-color: $Very-dark-blackish-blue;
+    grid-area: e;
+}
+.kira {
+    background-color: $White;
+    color: $Very-dark-grayish-blue;
+    grid-area: c;
+}
+.jeanette {
+    background-color: $White;
+    color: $Very-dark-grayish-blue;
+    grid-area: d;
+}
+
+.attribution {
+   text-align: center; 
+   padding-top: 2rem;
+}
+
+@media (max-width: 475px) {
+   .container {
+    display: flex;
+    flex-direction: column;
+   } 
+}
