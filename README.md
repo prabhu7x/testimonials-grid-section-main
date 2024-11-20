@@ -5,6 +5,8 @@ Thanks for checking out this front-end coding challenge.
 
 #### "I built a small, fully responsive website using HTML and CSS that works well on all devices." 
 
+[Live URL](https://prabhu7x.github.io/testimonials-grid-section-main/)
+
 ## Desktop Preview
 ![Design preview for the Testimonials grid section coding challenge](./images/desktop-screenshot.png)
 ## Mobile Preview
